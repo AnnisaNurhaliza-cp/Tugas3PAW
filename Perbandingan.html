@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perbandingan Bootstrap vs Tailwind CSS: Analisis Lengkap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-blue-600 flex items-center">
+                <i class="fas fa-code mr-2"></i>
+                Perbandingan CSS
+            </div>
+            <!-- Navigation -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#pendahuluan" class="text-gray-700 hover:text-blue-600 transition duration-300">Pendahuluan</a></li>
+                <li><a href="#kemudahan" class="text-gray-700 hover:text-blue-600 transition duration-300">Kemudahan Penggunaan</a></li>
+                <li><a href="#fleksibilitas" class="text-gray-700 hover:text-blue-600 transition duration-300">Fleksibilitas</a></li>
+                <li><a href="#performansi" class="text-gray-700 hover:text-blue-600 transition duration-300">Performansi</a></li>
+                <li><a href="#preferensi" class="text-gray-700 hover:text-blue-600 transition duration-300">Preferensi</a></li>
+                <li><a href="#kesimpulan" class="text-gray-700 hover:text-blue-600 transition duration-300">Kesimpulan</a></li>
+            </ul>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-gray-700 text-2xl">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="pendahuluan" class="pt-20 pb-16 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Bootstrap vs Tailwind CSS</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Perbandingan mendetail antara dua framework CSS populer: Kemudahan penggunaan, fleksibilitas, performansi, dan preferensi pribadi. Temukan mana yang paling cocok untuk proyek Anda.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#kemudahan" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">Mulai Baca</a>
+                <a href="#kesimpulan" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">Langsung ke Kesimpulan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kemudahan Penggunaan Section -->
+    <section id="kemudahan" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">1. Kemudahan Penggunaan</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Bootstrap</h3>
+                    <p class="text-gray-700 mb-4">Bootstrap unggul untuk pemula dengan kelas semantik seperti <code class="bg-gray-200 px-2 py-1 rounded">btn-primary</code>. Dalam proyek landing page FitLife, saya membangun hero section hanya dalam hitungan menit menggunakan grid intuitif (<code class="bg-gray-200 px-2 py-1 rounded">row col-md-6</code>).</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Kurva belajar rendah untuk prototipe cepat.</li>
+                        <li>Komponen siap pakai mempercepat pengembangan.</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Tailwind CSS</h3>
+                    <p class="text-gray-700 mb-4">Memerlukan kombinasi utility seperti <code class="bg-gray-200 px-2 py-1 rounded">bg-blue-500 px-4</code>, yang bisa terasa panjang. Dalam proyek yang sama, beralih ke Tailwind memakan waktu lebih lama tapi memberikan presisi.</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Kurva awal lebih curam tapi memberi kontrol lebih baik.</li>
+                        <li>Mendorong pemahaman CSS yang lebih dalam.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-lg text-gray-600">Bootstrap menang untuk kecepatan di proyek sederhana.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleksibilitas Section -->
+    <section id="fleksibilitas" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">2. Fleksibilitas dalam Desain</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="p-6 bg-gray-50 rounded-lg order-2 md:order-1">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Bootstrap</h3>
+                    <p class="text-gray-700 mb-4">Desain yang opinionated bisa terasa kaku; menyesuaikan navbar memerlukan override. Dalam proyek dashboard admin, saya menambahkan CSS custom untuk spacing, yang menambah kompleksitas.</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Cocok untuk UI standar tapi membatasi keunikan.</li>
+                        <li>Theming membantu, tapi tidak segranular itu.</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg order-1 md:order-2">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Tailwind CSS</h3>
+                    <p class="text-gray-700 mb-4">Utility-first memungkinkan kustomisasi penuh, misalnya <code class="bg-gray-200 px-2 py-1 rounded">bg-gradient-to-r from-blue-500</code> di hero FitLife. Tidak ada "tampilan framework" – fleksibilitas murni.</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Bangun desain unik tanpa CSS tambahan.</li>
+                        <li>Skalabel untuk layout kompleks.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-lg text-gray-600">Tailwind mendominasi untuk desain custom.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performansi Section -->
+    <section id="performansi" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">3. Performansi atau Kecepatan Loading</h2>
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Bootstrap</h3>
+                    <p class="text-gray-700 mb-4">Ukuran default ~150KB minified; efisien via CDN tapi menyertakan komponen tidak terpakai. Dalam proyek dashboard, render awal 1,8 detik karena overhead.</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Cocok untuk situs statis.</li>
+                        <li>Dampak minimal pada proyek kecil.</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-indigo-50 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Tailwind CSS</h3>
+                    <p class="text-gray-700 mb-4">Mentah ~3MB, tapi purging mengurangi menjadi <10KB gzipped. Dalam FitLife, skor Lighthouse membaik menjadi 1,2 detik dengan integrasi Vite.</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Dioprimalkan untuk aplikasi besar.</li>
+                        <li>Tree-shaking menghilangkan bloat.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <p class="text-lg text-gray-600">Tailwind unggul setelah optimasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preferensi Section -->
+    <section id="preferensi" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">4. Preferensi Pribadi</h2>
+            <div class="max-w-3xl mx-auto text-center p-8 bg-white rounded-lg shadow-md">
+                <p class="text-gray-700 mb-6 text-lg">Secara pribadi, saya lebih menyukai Tailwind CSS karena pendekatan utility modernnya, yang selaras dengan filosofi "desain dulu, kode kemudian." Dalam FitLife, ia memungkinkan iterasi cepat tanpa konflik styling, berbeda dengan hack Bootstrap. Lebih bersih dan mudah dipelihara jangka panjang, meskipun Bootstrap cocok untuk tim pemula.</p>
+                <div class="flex justify-center space-x-4 mt-6">
+                    <i class="fas fa-thumbs-up text-3xl text-green-500"></i>
+                    <span class="text-xl font-semibold text-indigo-600">Tailwind Pilihan Saya!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kesimpulan Section -->
+    <section id="kesimpulan" class="py-16 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Kesimpulan</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Bootstrap ideal untuk proyek cepat dengan desain standar seperti MVP. Tailwind bersinar di aplikasi custom yang fokus pada performansi seperti landing page FitLife. Pilih berdasarkan kebutuhan: Bootstrap untuk kesederhanaan, Tailwind untuk inovasi. Dengan evolusi web yang menuntut efisiensi, Tailwind terasa seperti masa depan.</p>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">
+                Jelajahi Tailwind <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2023 Situs Perbandingan CSS. Dibuat dengan Tailwind CSS.</p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-sm text-gray-400">Terinspirasi dari pengalaman proyek nyata.</p>
+        </div>
+    </footer>
+
+    <!-- Simple Mobile Menu Script (Optional Enhancement) -->
+    <script>
+        const mobileBtn = document.querySelector('button[md\\:hidden]');
+        const navUl = document.querySelector('ul');
+        mobileBtn.addEventListener('click', () => {
+            navUl.classList.toggle('hidden');
+            navUl.classList.toggle('flex');
+            navUl.classList.toggle('flex-col');
+            navUl.classList.toggle('absolute');
+            navUl.classList.toggle('bg-white');
+            navUl.classList.toggle('w-full');
+            navUl.classList.toggle('top-16');
+            navUl.classList.toggle('left-0');
+            navUl.classList.toggle('p-4');
+            navUl.classList.toggle('space-y-4');
+        });
+    </script>
+
+</body>
+</html>
